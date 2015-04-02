@@ -1,0 +1,105 @@
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Contact Us -->
+      <div class="col-sm-4">
+        <h4><i class="fa fa-map-marker text-red"></i> Contact us</h4>
+        <p>For all inquiries, please contact:</p>
+        <p>
+          Tel: +7 (8182) 46-03-17<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +7 (909) 556-03-17<br>
+          Email: <a href="#">soft.29@mail.ru</a>
+          <br/><br/>
+          Russia, 163000<br />
+          Arkhangelsk<br/>
+          Troitskiy 106
+        </p>
+      </div>
+      <!-- Recent Tweets -->
+      <div class="col-sm-4">
+        <h4><i class="fa fa-twitter-square text-red"></i> News</h4>
+        <div class="tweet">
+          <i class="fa fa-twitter fa-2x"></i>
+          <p>
+			BIRT report engine integrated with ECM Alfresco.
+            <a href="#">10 days ago</a>
+          </p>
+        </div>
+        <div class="tweet">
+          <i class="fa fa-twitter fa-2x"></i>
+          <p>
+            CentOS is now supported as a target Linux system for enterprise solutions.
+            <a href="#">15 days ago</a>
+          </p>
+        </div>
+      </div>
+      <!-- Newsletter -->
+      <div class="col-sm-4">
+        <h4><i class="fa fa-envelope text-red"></i> Subscription</h4>
+        <p>
+          Enter Your Email Address in the field below to subscribe to our newsletter.
+          <br>
+          We promise not to bother you often! You can always unsubscribe.
+        </p>
+        <form class="form" role="form">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="input-group">
+                <label class="sr-only" for="subscribe-email">Your Email</label>
+                <input type="email" class="form-control" id="subscribe-email" placeholder="Enter your Email">
+                <span class="input-group-btn">
+                  <button type="submit2" class="btn btn-default">OK</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Copyright -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="copyright">
+        &copy; Soft29 Solutions, 2015
+      </div>
+    </div>
+  </div>  <!-- / .row -->
+</div> <!-- / .container -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25145567 = new Ya.Metrika({id:25145567,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/25145567" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="$url.resource('js/bootstrap.min.js')"></script>
+<script src="$url.resource('js/scrolltopcontrol.js')"></script>
+<script src="$url.resource('js/custom.js')"></script>
+<script src="$url.resource('js/index.js')"></script>
