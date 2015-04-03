@@ -34,12 +34,12 @@
     		        #set($commentCount = $entry.commentCount)
     		        #if($entry.commentsStillAllowed || $commentCount > 0)
     		            #set($link = "$url.comments($entry.anchor)" )
-    		            <a href="$link" class="commentslink">$text.get("macro.weblog.comments") [$commentCount]</a>
+    		            <a href="$link" class="commentslink text-muted">$text.get("macro.weblog.comments") ($commentCount)</a>
     		        #end
     
     		        #if ($utils.isUserAuthorizedToAuthor($entry.website))
     		            &nbsp;|&nbsp;
-    		            <a href="$url.editEntry($entry.anchor)">
+    		            <a href="$url.editEntry($entry.anchor)" class="text-muted">
     		                $text.get("generic.edit")</a>
     		        #end
     		    </p>
@@ -48,7 +48,7 @@
     				<p class="entryInfo" style="clear: right">
     				    Tags:
     				    #foreach($tag in $entry.tags)
-                            <i class="fa fa-tag text-muted"></i> <a class="tagLink" href="$url.tag($tag.name)">$tag.name</a>
+                            <i class="fa fa-tag text-muted"></i> <a class="tagLink" style="color: rgb(85, 85, 85);" href="$url.tag($tag.name)">$tag.name</a>
     				    #end
     				</p>
     		    #end
