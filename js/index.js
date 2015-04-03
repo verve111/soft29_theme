@@ -24,7 +24,7 @@ function isRu() {
 	}
 }
 
-$('#blog_navnar.navbar.navbar-default.navbar-fixed-top a[href!="#"]').each(
+$('#blog_navnar.navbar.navbar-default.navbar-fixed-top a[href!="#"], #blog_bread_crump').each(
 	function() {
 		var href = this.href;
 		var sourceLang;

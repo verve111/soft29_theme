@@ -14,20 +14,34 @@
 	<header>
 		#includeTemplate($model.weblog "standard_header")
 	</header>
+	
+	    <!-- Wrapper -->
+    <div class="wrapper">
 
+      <!-- Topic Header -->
+      <div class="topic">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Our Company's Blog</h3>
+            </div>
+            <div class="col-sm-8">
+              <ol class="breadcrumb pull-right hidden-xs">
+                <li><a id="blog_bread_crump" href="index.html">Home</a></li>
+                <li class="active">Blog</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>			
+		
 	<!-- BODY -->
 	<div class="container">
-		
-		<div class="row" style="margin-top:65px;">
-			<div class="col-lg-12">
-				<h1 class="page-header">$model.weblog.name&nbsp;<small>$model.weblog.tagline</small></h1>
-			</div>
-	  	</div>
 	  	
 	  	<div class="row">
 	  	
 		  	<!-- BODY MAIN-->
-		   	<div id="main_content" class="col-lg-8">
+		   	<div id="main_content" class="col-lg-9">
 				#set($pager = $model.getWeblogEntriesPager())
 				#showWeblogEntriesPager($pager)
 				#if ($model.permalink)
@@ -35,71 +49,76 @@
 					#showWeblogEntryCommentForm($entry)
 				#end
 				<ul class="pager">
-	        		#if($utils.isNotEmpty($pager.prevLink))<li class="previous"><a href="$pager.prevLink">← $pager.prevName</a></li>
-#end
+	        		#if($utils.isNotEmpty($pager.prevLink))<li class="previous"><a href="$pager.prevLink">← $pager.prevName</a></li>#end
 				    #if($utils.isNotEmpty($pager.nextLink))<li class="next"><a href="$pager.nextLink">$pager.nextName →</a></li>#end
 				</ul>
 			</div>
 		
 			<!-- BODY - SIDEBAR -->
-			<div id="sidebar_content" class="col-lg-4">
-				<div class="well">
-					<h3>Welcome</h3>
-					<p class="details">
-					#set($blurb = $model.weblog.about)
-					#if ($blurb)
-					$model.weblog.about
-					#else
-					<span class="setup">Add an about message on your Weblog Settings page and it will appear here</span>
-					#end
-					Click the link below to subscribe via your favorite feed reader:</p>
-
-					<div id="subscribe">
-						<a href="$url.feed.entries.atom">
-							<img src='$url.resource("icons/feed-icon-28x28.png")' title="RSS/Atom feed icon" alt="RSS/Atom feed icon" /></a>&nbsp;
-						<a href="$url.feed.entries.atom">Subscribe to this blog</a>
+			<div id="sidebar_content" class="col-lg-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<a href="$url.feed.entries.atom" class="rss">
+                            <i class="fa fa-rss" title="RSS/Atom feed subscribe" alt="RSS/Atom feed icon" 
+								style="display: inline-block;  height: 34px;  width: 34px;  border-radius: 34px;  line-height: 34px;  text-align: center;  border: 1px solid #e9e9e9;  color: white;background-color:#ff9900;"></i></a>&nbsp;
+						
+						<a href="$url.feed.entries.atom" style="color: rgb(85, 85, 85);">Subscribe to this blog</a>
 					</div>
 				</div>
-				<div class="well">
-                    #set($mytags = $model.weblog.getPopularTags(-1, 30))
-                    #if ($mytags && $mytags.size() > 4)
-                       <h3>Hot tags</h3>
-                       <p class="details">Below are the most often used tags in the blog. Hover over a tag to see a count of entries, click a tag to see the most recent posts with the tag.</p>
-                       <div id="tagcloud">
-                       #foreach ($tag in $mytags)
-                          <a class="tag s${tag.intensity}" href="$url.tag($tag.name)" title="$tag.count">$tag.name</a>
-                       #end
+
+				<!-- -1 all time, 30 max tags amount-->
+                #set($mytags = $model.weblog.getPopularTags(-1, 30))
+                #if ($mytags && $mytags.size() > 0)
+    				<div class="panel panel-default">
+                       <div class="panel-heading">
+                            Tags
+                       </div>							
+    				   <div class="panel-body">
+                       <!--div id="tagcloud"-->
+						   <ul>
+                               #foreach ($tag in $mytags)
+								<li>								
+                                  <a class="tag s${tag.intensity}" href="$url.tag($tag.name)">$tag.name ($tag.count)</a>
+                                </li>
+							   #end
+						   </ul>
                        </div>
-                    #end
-				</div>
-				<div class="well">		
-					#if ($utils.isUserAuthorizedToAuthor($weblog))
-						<li>
-						   <a href="$url.createEntry">$text.get("navigationBar.newEntry")</a>
-						</li>
-						#if($utils.isUserAuthorizedToAdmin($weblog))
-						   <li>
-							   <a href="$url.editSettings">$text.get("navigationBar.settings")</a>
-						   </li>
-						#end
-							<li>
-								<a href="$url.logout">$text.get("navigationBar.logout")</a>
-							</li>
-					#else
-						#if ($utils.isUserAuthenticated())
-							<li>
-								<a href="$url.logout">$text.get("navigationBar.logout")</a>
-							</li>
-						#else
-							<li>
-								<a href="$url.login">$text.get("navigationBar.login")</a>
-							</li>
-						#end
-					#end				
+                    </div>
+                #end
+
+				<div class="panel panel-default">
+    				<div class="panel-body">
+						<ul>
+        					#if ($utils.isUserAuthorizedToAuthor($model.weblog))
+        						<li>
+        						   <a href="$url.createEntry">$text.get("navigationBar.newEntry")</a>
+        						</li>
+        						#if($utils.isUserAuthorizedToAdmin($model.weblog))
+        						   <li>
+        							   <a href="$url.editSettings">$text.get("navigationBar.settings")</a>
+        						   </li>
+        						#end
+        							<li>
+        								<a href="$url.logout">$text.get("navigationBar.logout")</a>
+        							</li>
+        					#else
+        						#if ($utils.isUserAuthenticated())
+        							<li>
+        								<a href="$url.logout">$text.get("navigationBar.logout")</a>
+        							</li>
+        						#else
+        							<li>
+        								<a href="$url.login">$text.get("navigationBar.login")</a>
+        							</li>
+        						#end
+    						#end
+                        </ul>
+                    </div>				
 				</div>
 			</div> <!-- close sidebar_content -->
 		</div> <!-- /.row -->
 	</div> <!-- /.container -->
+    </div><!-- /.wrapper -->
 
 	<!-- FOOTER -->
 	<footer>
