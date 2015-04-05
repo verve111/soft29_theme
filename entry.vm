@@ -240,10 +240,14 @@
 			<!-- BODY - SIDEBAR -->
 			<div id="sidebar_content" class="col-lg-3">
 				<div class="panel panel-default">
+					<div class="panel-heading">
+						Share this post
+					</div>					
 					<div class="panel-body">
-					<table><tbody>
-                        <tr><div class="share42init" data-url="$url.absoluteSite$model.weblogEntry.permaLink"
-							data-title="$model.weblogEntry.title"></div></tr>
+                        <div class="share42init" data-url="$url.absoluteSite$model.weblogEntry.permaLink"
+                        							data-title="$model.weblogEntry.title"></div>						
+					<!--table><tbody>
+                        <tr></tr>
 						<tr>
 						  <td><img src="$url.resource('icons/delicious.gif')"
 						         alt="del.icio.us" height="16" width="16" />
@@ -267,7 +271,7 @@
 						          See who links to it</a>
 						  </td>
 						</tr>
-					</tbody></table>
+					</tbody></table-->
                     </div>
 				</div>
 				<!--div class="well">
