@@ -141,8 +141,9 @@
     <resource path="js/bootstrap.min.js" />
     <resource path="js/custom.js"/>
     <resource path="js/index.js"/>	
-    <resource path="js/scrolltopcontrol.js" />	
-	
+    <resource path="js/scrolltopcontrol.js" />
+   	<resource path="js/share42/share42.js" />
+   	<resource path="js/share42/icons.png" />	
 	
     <resource path="fonts/font-awesome-4.1.0/css/font-awesome.min.css" />		
     <resource path="fonts/font-awesome-4.1.0/fonts/FontAwesome.otf" />	
@@ -152,7 +153,8 @@
     <resource path="fonts/font-awesome-4.1.0/fonts/fontawesome-webfont.woff" />
 
     <resource path="img/sistema-documentooborota.png" />	
-    <resource path="img/user.jpg" />		
+    <resource path="img/user.jpg" />
+   	<resource path="img/user.png" />	
 	
 	<resource path="ico/favicon.ico" />
 	

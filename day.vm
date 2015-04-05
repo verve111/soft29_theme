@@ -54,7 +54,7 @@
     		    #end
             </div>
 		</div>
-		<hr>
+		<!--hr-->
     #end
 
 #if(!$model.permalink)

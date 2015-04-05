@@ -33,7 +33,11 @@ $('#blog_navnar.navbar.navbar-default.navbar-fixed-top a[href!="#"], #blog_bread
 		} else {
 			sourceLang = 'en/';
 		}
-		this.href = href.replace('blog/', sourceLang);
+		if (href.indexOf('blog/entry/') != -1) {
+			this.href = href.replace('blog/entry/', sourceLang);
+		} else if (href.indexOf('blog/') != -1) {
+			this.href = href.replace('blog/', sourceLang);
+		}
 	});
 
 $('#blog_navnar.navbar.navbar-default.navbar-fixed-top a').each(
