@@ -35,6 +35,8 @@ $('#blog_navnar.navbar.navbar-default.navbar-fixed-top a[href!="#"], #blog_bread
 		}
 		if (href.indexOf('blog/entry/') != -1) {
 			this.href = href.replace('blog/entry/', sourceLang);
+		} else if (href.indexOf('blog/tags/') != -1) {
+			this.href = href.replace('blog/tags/', sourceLang);
 		} else if (href.indexOf('blog/') != -1) {
 			this.href = href.replace('blog/', sourceLang);
 		}

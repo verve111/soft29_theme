@@ -103,3 +103,4 @@
 <script src="$url.resource('js/scrolltopcontrol.js')"></script>
 <script src="$url.resource('js/custom.js')"></script>
 <script src="$url.resource('js/index.js')"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>

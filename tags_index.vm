@@ -12,51 +12,72 @@
 	<header>
 		#includeTemplate($model.weblog "standard_header")
 	</header>
-
-	<!-- BODY -->
-	<div class="container">
 	
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header">$model.weblog.name&nbsp;<small>$model.weblog.tagline</small></h1>
-			</div>
-	  	</div>
-	  	
-	  	<div class="row">
-	  		<!-- BODY MAIN-->
-			<div id="main_content" class="col-lg-8">
-		   	  	<div class="alert alert-info"><p>Entries tagged $model.tags</p></div>
-				#set($pager = $model.getWeblogEntriesPager())
-				#showWeblogEntriesPager($pager)
-				#if ($model.permalink)
-					#showWeblogEntryComments($entry)
-					#showWeblogEntryCommentForm($entry)
-				#end
-				<ul class="pager">
-			        #if($utils.isNotEmpty($pager.prevLink))<li class="previous"><a href="$pager.prevLink">← $pager.prevName</a></li>
-	#end
-			        #if($utils.isNotEmpty($pager.nextLink))<li class="next"><a href="$pager.nextLink">$pager.nextName →</a></li>#end
-		        </ul>
-			</div>
-			
-			<!-- BODY - SIDEBAR -->
-			<div id="sidebar_content" class="col-lg-4">
-				<div class="well">
-                    #set($mytags = $model.weblog.getPopularTags(-1, 30))
-                    #if ($mytags && $mytags.size() > 4)
-                       <h3>Hot tags</h3>
-                       <p class="details">Below are the most often used tags in the blog. Hover over a tag to see a count of entries, click a tag to see the most recent posts with the tag.</p>
-                       <div id="tagcloud">
-                       #foreach ($tag in $mytags)
-                          <a class="tag s${tag.intensity}" href="$url.tag($tag.name)" title="$tag.count">$tag.name</a>
-                       #end
-                       </div>
-                    #end
+    <div class="wrapper">
+		
+          <!-- Topic Header -->
+          <div class="topic">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4">
+                  <h3>Blog Tag Search</h3>
                 </div>
-			</div> <!-- close sidebar_content -->
-		</div>
-	</div>
-
+                <div class="col-sm-8">
+                  <ol class="breadcrumb pull-right hidden-xs">
+                    <li><a id="blog_bread_crump" href="index.html">Home</a></li>
+                    <li><a href="/soft29/blog">Blog</a></li>				
+                    <li class="active">Blog Tag Search</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+		  
+		<!-- BODY -->
+    	<div class="container">
+    	
+    	  	<div class="row">
+    	  		<!-- BODY MAIN-->
+    			<div id="main_content" class="col-lg-9">
+    		   	  	<div class="alert alert-info"><p>Entries tagged $model.tags</p></div>
+    				#set($pager = $model.getWeblogEntriesPager())
+    				#showWeblogEntriesPager($pager)
+    				#if ($model.permalink)
+    					#showWeblogEntryComments($entry)
+    					#showWeblogEntryCommentForm($entry)
+    				#end
+    				<ul class="pager">
+    			        #if($utils.isNotEmpty($pager.prevLink))<li class="previous"><a href="$pager.prevLink">← $pager.prevName</a></li>#end
+    			        #if($utils.isNotEmpty($pager.nextLink))<li class="next"><a href="$pager.nextLink">$pager.nextName →</a></li>#end
+    		        </ul>
+    			</div>
+    			
+    			<!-- BODY - SIDEBAR -->
+    			<div id="sidebar_content" class="col-lg-3">
+    				<!-- -1 all time, 30 max tags amount-->
+                    #set($mytags = $model.weblog.getPopularTags(-1, 30))
+                    #if ($mytags && $mytags.size() > 0)
+        				<div class="panel panel-default">
+                           <div class="panel-heading">
+                                Tags
+                           </div>							
+        				   <div class="panel-body">
+                           <!--div id="tagcloud"-->
+    						   <ul>
+                                   #foreach ($tag in $mytags)
+    								<li>								
+                                      <a class="tag s${tag.intensity}" href="$url.tag($tag.name)">$tag.name ($tag.count)</a>
+                                    </li>
+    							   #end
+    						   </ul>
+                           </div>
+                        </div>
+                    #end
+    			</div> <!-- close sidebar_content -->
+    		</div>
+    	</div>
+	</div> <!-- wrapper -->
+	
 	<!-- FOOTER -->
 	<footer>
 		#includeTemplate($model.weblog "standard_footer")
