@@ -154,7 +154,8 @@
 
     <resource path="img/sistema-documentooborota.png" />	
     <resource path="img/user.jpg" />
-   	<resource path="img/user.png" />	
+   	<resource path="img/user.png" />
+   	<resource path="img/Push-Pin-Icon.jpg" />	   		
 	
 	<resource path="ico/favicon.ico" />
 	

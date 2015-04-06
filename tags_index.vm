@@ -25,7 +25,7 @@
                 <div class="col-sm-8">
                   <ol class="breadcrumb pull-right hidden-xs">
                     <li><a id="blog_bread_crump" href="index.html">Home</a></li>
-                    <li><a href="/soft29/blog">Blog</a></li>				
+                    <li><a href="/blog">Blog</a></li>				
                     <li class="active">Blog Tag Search</li>
                   </ol>
                 </div>
