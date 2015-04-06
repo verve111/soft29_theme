@@ -29,17 +29,8 @@ $('#blog_navnar.navbar.navbar-default.navbar-fixed-top a[href!="#"], #blog_bread
 		var href = this.href;
 		var sourceLang;
 		if (isRu()) {
-			sourceLang = '';
-		} else {
-			sourceLang = 'en/';
-		}
-		if (href.indexOf('blog/entry/') != -1) {
-			this.href = href.replace('blog/entry/', sourceLang);
-		} else if (href.indexOf('blog/tags/') != -1) {
-			this.href = href.replace('blog/tags/', sourceLang);
-		} else if (href.indexOf('blog/') != -1) {
-			this.href = href.replace('blog/', sourceLang);
-		}
+			this.href = href.replace('en/', '');			
+		} 
 	});
 
 $('#blog_navnar.navbar.navbar-default.navbar-fixed-top a').each(
