@@ -287,7 +287,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">Related entries</div>
 					<div class="panel-body">
-					#set($recentInCat = $model.weblog.getRecentWeblogEntries($model.weblogEntry.category.name, 20))
+					#set($recentInCat = $model.weblog.getRecentWeblogEntries($model.weblogEntry.category.name, 10))
 					<ul>#foreach($recentEntry in $recentInCat)
 						  <li class="entryLink"><a href="$recentEntry.permalink" style="text-transform:none;">$recentEntry.title</a></li>
 					#end</ul>
