@@ -58,7 +58,7 @@ $('#blog_navnar.navbar.navbar-default.navbar-fixed-top a').each(
 			$(this).html(h.replace('ECM Alfresco', 'Внедрение СЭД Alfresco'));
 		}			
 		if (h.indexOf('Enterprise Portal Liferay') == 0) {
-			$(this).html(h.replace('Enterprise Portal Liferay', 'Корпоративый портал Liferay'));
+			$(this).html(h.replace('Enterprise Portal Liferay', 'Корпоративный портал Liferay'));
 		}	
 		if (h.indexOf('Services') == 0) {
 			$(this).html(h.replace('Services', 'Услуги'));
