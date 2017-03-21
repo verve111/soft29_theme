@@ -1,5 +1,6 @@
-    <!-- Navigation -->
-    <div id="blog_navnar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!-- NAVIGATION
+    ================================================== -->
+    <div class="navbar navbar-default " role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -8,16 +9,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/en/index.html"><img src='$url.resource("img/sistema-documentooborota.png")' alt="Система документооборота"></a>
+          <a class="navbar-brand" href="/en/index.html"><img src='$url.resource("assets/img/m/sistema-documentooborota.png")' alt="Система документооборота"></a>
         </div>
         <div class="collapse navbar-collapse">
           <!--button class="navbar-btn btn btn-red pull-right hidden-sm hidden-xs">Sign In</button -->
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
             <li>
               <a href="/en/index.html">Home</b></a>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Company <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Company <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="/en/about-us.html">About us</a></li>
                 <li><a href="/en/contact-us.html">Contacts</a></li>
@@ -31,18 +32,21 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="/en/corporate-solutions.html">Enterprise software</a></li>
+                <li><a href="/en/corporate-solutions.html">Enterprise software development</a></li>
                 <li><a href="/en/consulting.html">IT Consulting</a></li>
+                <li><a href="/en/mobile-dev.html">Android, iOS Development</a></li>
               </ul>
             </li>
-            <li class="active">
+            <li>
               <a href="/blog">Blog</a>
-            </li> 			
-         
-            <li class="telephone"><h4>+7 (8182) 47-20-50<br style=""><a href="#">info@soft29.ru</a></h4></li>
+            </li>             
           </ul>
+            <div class="nav navbar-nav navbar-right">
+                <p class="navbar-text telephone ">+7 (8182) 47-20-50<br style=""><a href="#">info@soft29.ru</a></p>
+            </div>		  
         </div><!--/.nav-collapse -->
+
       </div>
     </div> <!-- / .navigation -->

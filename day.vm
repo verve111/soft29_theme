@@ -3,34 +3,40 @@
 #end
 
     #foreach( $entry in $entries )
-		<div class="blog">
-			<img src='$url.resource("img/user.jpg")' alt="...">
-			<div class="blog-desc">
+		<div class="blog-post">
+			<!-- old: img src='$url.resource("assets/img/m/blog/user.jpg")' alt="..."-->
+            <!-- Avatar -->
+            <div class="blog-post__avatar">
+              <img src='$url.resource("assets/img/m/blog/user.jpg")' class="img-responsive" alt="...">
+            </div>
+			
+            <div class="blog-post__body">
+
     			<a name="$utils.encode($entry.anchor)" id="$utils.encode($entry.anchor)"></a>
-    
+   			
     		    #if($model.permalink)
-    		    <h3 class="entryTitle">$entry.title</h3>
+    		    	<h3 class="blog-post__title"><strong>$entry.title</strong></h3>
     		    #else
-    		    <h3 class="entryTitle"><a href="$entry.permalink">$entry.title</a></h3>
+    		    	<h3 class="blog-post__title"><a href="$entry.permalink"><strong>$entry.title</strong></a></h3>
     		    #end
-    			<hr>
+    			<!--hr-->
 				
-    			<p class="text-muted">by <span style="text-transform: capitalize;">$entry.creator.screenName</span> on $utils.formatDate($day, "EEEE MMM dd, yyyy")</p>
+    			<p class="blog-post__info">by <span style="text-transform: capitalize;">$entry.creator.screenName</span> on $utils.formatDate($day, "EEEE MMM dd, yyyy")</p>
     	
-    		    <div class="entryContent">
+    		    <div class="blog-post__content">
     		        #if($model.permalink)
     		            <p>$entry.displayContent</p>
     		        #else
     		            #if($entry.summary != "")
     		                <p>$entry.summary</p>
-                            <a class="btn btn-red" href="$url.entry($entry.anchor)">Read More <i class="fa fa-angle-right"></i></a>
+                            <a class="btn btn-primary blog-post__read-more" href="$url.entry($entry.anchor)">Read More <i class="fa fa-angle-right"></i></a>
                         #else
                             <p>$entry.displayContent</p>
                         #end
     		        #end
     		    </div>
-    
-    		    <p class="entryInfo" style="clear: right; margin-top:30px;">
+    		    
+    		    <p style="clear: right;">
     		        #set($commentCount = $entry.commentCount)
     		        #if($entry.commentsStillAllowed || $commentCount > 0)
     		            #set($link = "$url.comments($entry.anchor)" )
@@ -45,7 +51,7 @@
     		    </p>
     
     		    #if ($entry.tags && $entry.tags.size() > 0)
-    				<p class="entryInfo" style="clear: right">
+    				<p style="clear: right">
     				    Tags:
     				    #foreach($tag in $entry.tags)
                             <i class="fa fa-tag text-muted"></i> <a class="tagLink" style="color: rgb(85, 85, 85);" href="$url.tag($tag.name)">$tag.name</a>

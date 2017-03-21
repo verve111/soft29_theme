@@ -133,29 +133,31 @@
         </rendition>
     </template>
     
-    <resource path="css/animate.css" />
+    <resource path="assets/plugins/animate/animate.css" />
     <!--resource path="css/bootstrap.css" /-->
-    <resource path="css/style.css" />
+    <resource path="assets/css/styles.css" />
 
-    <resource path="js/jquery.js" />
-    <resource path="js/bootstrap.min.js" />
-    <resource path="js/custom.js"/>
-    <resource path="js/index.js"/>	
-    <resource path="js/scrolltopcontrol.js" />
-   	<resource path="js/share42/share42.js" />
-   	<resource path="js/share42/icons.png" />	
+    <resource path="assets/js/jquery-1.11.1.min.js" />
+    <resource path="assets/bootstrap/js/bootstrap.min.js" />
+    <resource path="assets/js/custom.js"/>
+    <resource path="assets/js/index.js"/>	
+    <resource path="assets/plugins/scrolltopcontrol/scrolltopcontrol.js" />
+   	<resource path="assets/plugins/share42/share42.js" />
+   	<resource path="assets/plugins/share42/icons.png" />	
 	
-    <resource path="fonts/font-awesome-4.1.0/css/font-awesome.min.css" />		
-    <resource path="fonts/font-awesome-4.1.0/fonts/FontAwesome.otf" />	
-    <resource path="fonts/font-awesome-4.1.0/fonts/fontawesome-webfont.eot" />
-    <resource path="fonts/font-awesome-4.1.0/fonts/fontawesome-webfont.svg" />
-    <resource path="fonts/font-awesome-4.1.0/fonts/fontawesome-webfont.ttf" />
-    <resource path="fonts/font-awesome-4.1.0/fonts/fontawesome-webfont.woff" />
+    <resource path="assets/plugins/font-awesome/css/font-awesome.min.css" />		
+    <resource path="assets/plugins/font-awesome/fonts/FontAwesome.otf" />	
+    <resource path="assets/plugins/font-awesome/fonts/fontawesome-webfont.eot" />
+    <resource path="assets/plugins/font-awesome/fonts/fontawesome-webfont.svg" />
+    <resource path="assets/plugins/font-awesome/fonts/fontawesome-webfont.ttf" />
+    <resource path="assets/plugins/font-awesome/fonts/fontawesome-webfont.woff" />
+    <resource path="assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2" />    
 
-    <resource path="img/sistema-documentooborota.png" />	
-    <resource path="img/user.jpg" />
-   	<resource path="img/user.png" />
-   	<resource path="img/Push-Pin-Icon.jpg" />	   		
+    <resource path="assets/img/m/sistema-documentooborota.png" />
+    <!-- only in blog theme. Don't delete. -->	
+    <resource path="assets/img/m/blog/user.jpg" />
+   	<resource path="assets/img/m/blog/user.png" />
+   	<resource path="assets/img/m/blog/Push-Pin-Icon.jpg" />	   		
 	
 	<resource path="ico/favicon.ico" />
 	

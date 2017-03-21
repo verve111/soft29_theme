@@ -3,7 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta property="og:image" content="$url.resource('img/Push-Pin-Icon.jpg')" />
+  <meta property="og:image" content="$url.resource('assets/img/m/blog/Push-Pin-Icon.jpg')" />
   <meta property="og:description" content="Liferay Alfresco developer blog post" />
   <meta property="og:title" content="$model.weblogEntry.title" />  
   #includeTemplate($model.weblog "standard_head")
@@ -73,13 +73,15 @@
 					</div>
 					#if($entry.commentCount > 0)
 						#foreach( $comment in $comments )
-						<div class="cmt">							
+						<div class="comments__item">							
 							#if($comment.approved || $model.commentForm.preview)
-								<a name="comment-$comment.timestamp" id="comment-$comment.timestamp"></a>
+									<a name="comment-$comment.timestamp" id="comment-$comment.timestamp"></a>
 								<!--div class="comment#if($velocityCount % 2 == 0) even#else odd#end" id="comment${velocityCount}"-->
-									<img src='$url.resource("img/user.png")' alt="...">									
-									<div class="cmt-block">
-    									<p class="comment-details">
+								<div class="comments-item__avatar">								
+									<img src='$url.resource("assets/img/m/blog/user.png")' class="img-responsive" alt="...">
+								</div>																		
+									<div class="comments-item__body">
+    									<p class="comments-item__info">
     									<!--$text.get("macro.weblog.postedby") "Published by string"-->
     									#if (!$utils.isEmpty($comment.name) && !$utils.isEmpty($comment.url))
     										<a rel="nofollow" href="$comment.url"><b>$comment.name</b></a>
@@ -95,7 +97,7 @@
     									<a href="$url.comment($entry.anchor, $comment.timestamp)"
     									   class="entrypermalink" title="$text.get( "macro.weblog.commentpermalink.title" )">#</a>
     									</p>
-    									<p class="cmt-body">$comment.content</p>										
+    									<p class="comments-item__content">$comment.content</p>										
                                     </div>
 								<!--/div-->
 							#end
@@ -140,7 +142,7 @@
 									<input type="text" name="url" class="form-control" value="$cform.url" id="input3">
 							  	</div>
 							  	#if ($config.commentEmailNotify)
-							  	<div class="form-group col-lg-6">
+							  	<div class="form-group col-lg-6" style="padding-left: 35px;">
 								  	<div class="checkbox">
 									  <label>
 										<input type="checkbox" class="checkbox" id="notify" name="notify" #if($cform.notify)CHECKED #end>
@@ -149,7 +151,7 @@
 									</div>
 								</div>
 								#end
-								<div class="form-group col-lg-6">
+								<div class="form-group col-lg-6" style="padding-left: 35px;">
 								  	<div class="checkbox">
 									  <label>
 										<input type="checkbox" class="checkbox" id="rememberInfo" name="rememberInfo" />
@@ -179,7 +181,7 @@
 								   <div id="commentAuthenticator"></div>
 								   <!--input type="button" class="btn btn-primary" name="post" value="&nbsp;$text.get("macro.weblog.postpreview" )&nbsp;"
 								      onclick="this.form.method.value='preview';this.form.submit()" /-->
-								   <input type="submit" class="btn btn-red" name="post" value="&nbsp;$text.get( "macro.weblog.post" )&nbsp;" />
+								   <input type="submit" class="btn btn-primary" name="post" value="&nbsp;$text.get( "macro.weblog.post" )&nbsp;" />
 								</div>
 							</div>
 						</form>
@@ -248,7 +250,7 @@
 					</div>					
 					<div class="panel-body">
                         <div class="share42init" data-url="$url.absoluteSite$model.weblogEntry.permaLink"
-                        	data-image="$url.resource('img/Push-Pin-Icon.jpg')" 
+                        	data-image="$url.resource('assets/img/m/blog/Push-Pin-Icon.jpg')" 
 							data-description="Liferay Alfresco developer blog post"
 							data-title="$model.weblogEntry.title"></div>						
 					<!--table><tbody>
@@ -301,7 +303,7 @@
 	<footer>
 		#includeTemplate($model.weblog "standard_footer")
 	</footer>
-		<script type="text/javascript" src="$url.resource('js/share42/share42.js')"></script>
+		<script type="text/javascript" src="$url.resource('assets/plugins/share42/share42.js')"></script>
 </body>
 </html>
 

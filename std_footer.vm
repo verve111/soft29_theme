@@ -1,74 +1,109 @@
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <!-- Contact Us -->
-      <div class="col-sm-4">
-        <h4><i class="fa fa-map-marker text-red"></i> Contact us</h4>
-        <p>For all inquiries, please contact:</p>
-        <p>
-          Tel: +7 (8182) 47-20-50<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +7 (911) 561-58-76<br>
-          Email: <a href="#">info@soft29.ru</a>
-          <br/><br/>
-          Russia, 163000<br />
-          Arkhangelsk<br/>
-          Troitskiy 106
-        </p>
-      </div>
-      <!-- Recent Tweets -->
-      <div class="col-sm-4">
-        <h4><i class="fa fa-twitter-square text-red"></i> News</h4>
-        <div class="tweet">
-          <i class="fa fa-twitter fa-2x"></i>
-          <p>
-			BIRT report engine integrated with ECM Alfresco.
-            <a href="#">10 days ago</a>
-          </p>
-        </div>
-        <div class="tweet">
-          <i class="fa fa-twitter fa-2x"></i>
-          <p>
-            CentOS is now supported as a target Linux system for enterprise solutions.
-            <a href="#">15 days ago</a>
-          </p>
-        </div>
-      </div>
-      <!-- Newsletter -->
-      <div class="col-sm-4">
-        <h4><i class="fa fa-envelope text-red"></i> Subscription</h4>
-        <p>
-          Enter Your Email Address in the field below to subscribe to our newsletter.
-          <br>
-          We promise not to bother you often! You can always unsubscribe.
-        </p>
-        <form class="form" role="form">
-          <div class="row">
-            <div class="col-sm-8">
-              <div class="input-group">
-                <label class="sr-only" for="subscribe-email">Your Email</label>
-                <input type="email" class="form-control" id="subscribe-email" placeholder="Enter your Email">
-                <span class="input-group-btn">
-                  <button type="submit2" class="btn btn-default">OK</button>
-                </span>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- Copyright -->
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="copyright">
-        &copy; Soft29 Solutions, 2016
-      </div>
-    </div>
-  </div>  <!-- / .row -->
-</div> <!-- / .container -->
+	<div class="footer_top">
+	  <div class="container">
+		<div class="row">
+		  <!-- Contact Us -->
+		  <div class="col-sm-4 col-xs-12">
+              <div class="footer__item">		  
+				<h5 class="footer-item__title"><i class="fa fa-map-marker text-red"></i> Contact us</h5>
+					<div class="footer-item__content">
+						<p>For all inquiries, please contact:</p>
+						<div itemscope itemtype="http://schema.org/Organization">
+						  <div itemprop="name" style="display: none;">Soft29</div>
+						  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+							  <span itemprop="addressLocality">Arkhangelsk</span><br/>
+							  <span itemprop="streetAddress">Troitskiy 106</span><br/>
+							  Postal code: <span itemprop="postalCode">163000</span><br/>
+							  <span itemprop="addressCountry">Russia</span>
+						  </div>
+						  <br/>
+						  Tel: <span itemprop="telephone">+7 (8182) 47-20-50</span><br />
+						  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span itemprop="telephone">+7 (911) 561-58-76</span><br/>
+						  Email: <a href="#"><span itemprop="email">info@soft29.ru</span></a>
+						</div>        
+					</div>        									
+				</div>        				
+		  </div>
+			<!-- Recent Tweets -->
+			<div class="col-xs-12 col-sm-4">
+			  <div class="footer__item">
+				<h5 class="footer-item__title"><span><i class="fa fa-twitter-square text-red"></i> News</span></h5>
+				<div class="footer-item__content">
+				  <div class="footer__tweet">
+					<div class="footer-tweet__icon">
+					  <i class="fa fa-twitter"></i>
+					</div>
+					<div class="footer-tweet__content">
+					  <p>
+						BIRT report engine integrated with ECM Alfresco.
+					  </p>
+					  <a href="#">10 days ago</a>
+					</div>
+				  </div>
+				  <div class="footer__tweet">
+					<div class="footer-tweet__icon">
+					  <i class="fa fa-twitter"></i>
+					</div>
+					<div class="footer-tweet__content">
+					  <p>
+						CentOS is now supported as a target Linux system for the enterprise solutions. 
+					  </p>
+					  <a href="#">15 days ago</a>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>		  
+		  <!-- Newsletter -->
+		  <div class="col-sm-4 col-xs-12">
+              <div class="footer__item">
+                <h5 class="footer-item__title"><span><i class="fa fa-envelope text-red"></i> Subscription</span></h5>
+                <div class="footer-item__content">		  
+					<p>
+		          Enter Your Email Address in the field below to subscribe to our newsletter.
+		          <br>
+		          We promise not to bother you often! You can always unsubscribe.
+					</p>
+					<form class="form" role="form">
+					  <div class="row">
+						<div class="col-sm-8">
+						  <div class="input-group">
+							<label class="sr-only" for="subscribe-email">Your Email</label>
+							<input type="email" class="form-control" id="subscribe-email" placeholder="Enter your Email">
+							<span class="input-group-btn">
+							  <button type="submit2" class="btn btn-default">OK</button>
+							</span>
+						  </div>
+						</div>
+					  </div>
+					</form>
+			  </div>
+			</div>			
+		  </div>		  
+		</div>
+	  </div>
+  </div>  
+  <!-- Footer Bottom -->
+  <div class="footer_bottom">
+	<div class="container">
+	  <div class="row">
+		<div class="col-xs-12 col-sm-6">
+		  <div class="footer__copyright">
+			&copy; Soft29 Solutions, 2017
+		  </div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+		  <ul class="footer__social">
+			<!--li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li-->
+			<li class="facebook"><a href="https://vk.com/life_alf" target="blank_"><i class="fa fa-vk"></i></a></li>
+			<!--li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			<li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			<li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li-->
+		  </ul>
+		</div>
+	  </div> <!-- / .row -->
+	</div> <!-- / .container -->
+  </div> <!-- / .footer_bottom -->    
+
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -97,10 +132,44 @@
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/25145567" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<!-- GA -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="$url.resource('js/bootstrap.min.js')"></script>
-<script src="$url.resource('js/scrolltopcontrol.js')"></script>
-<script src="$url.resource('js/custom.js')"></script>
-<script src="$url.resource('js/index.js')"></script>
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  ga('create', 'UA-45835478-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="$url.resource('assets/js/jquery-1.11.1.min.js')"></script>
+<script src="$url.resource('assets/bootstrap/js/bootstrap.min.js')"></script>
+<script src="$url.resource('assets/plugins/scrolltopcontrol/scrolltopcontrol.js')"></script>
+<script src="$url.resource('assets/js/custom.js')"></script>
+<script src="$url.resource('assets/js/index.js')"></script>
+
+
+<script type="text/javascript">
+	/* Toggle footer columns content on click (for extra small screens) */
+	$(function() {
+	  $(".footer-item__title").click(function() {
+	    var windowWidth = $(window).width();
+	    var thisContent = $(this).next();
+	
+	    if (windowWidth <= 767) {
+	      $(".footer-item__content").not(thisContent).slideUp();
+	      $(this).toggleClass("expanded").next().slideToggle();
+	    }
+	  });
+	
+	  $(window).resize(function() {
+	    if ( $(this).width() > 767 ) {
+	      $(".footer-item__content").css("display", "block");
+	    } else {
+	      $(".footer-item__content").css("display", "none");
+	    }
+	  });
+	});
+</script>
