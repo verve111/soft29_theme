@@ -153,7 +153,7 @@
     <resource path="assets/plugins/font-awesome/fonts/fontawesome-webfont.woff" />
     <resource path="assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2" />    
 
-    <resource path="assets/img/m/sistema-documentooborota.png" />
+    <resource path="assets/img/m/soft29v2.svg" />
     <!-- only in blog theme. Don't delete. -->	
     <resource path="assets/img/m/blog/user.jpg" />
    	<resource path="assets/img/m/blog/user.png" />

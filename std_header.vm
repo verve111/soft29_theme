@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/en/index.html"><img src='$url.resource("assets/img/m/sistema-documentooborota.png")' alt="Система документооборота"></a>
+          <a class="navbar-brand" href="/en/index.html"><img src='$url.resource("assets/img/m/soft29v2.svg")' alt="Система документооборота"></a>
         </div>
         <div class="collapse navbar-collapse">
           <!--button class="navbar-btn btn btn-red pull-right hidden-sm hidden-xs">Sign In</button -->
