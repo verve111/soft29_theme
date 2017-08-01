@@ -29,10 +29,11 @@
               <ul class="dropdown-menu">
                 <li><a href="/en/vnedreniye-alfresco.html">ECM Alfresco</a></li>
                 <li><a href="/en/liferay.html">Enterprise Portal Liferay</a></li>
+                <li><a href="/en/odoo.html">Odoo ERP</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="/en/corporate-solutions.html">Enterprise software development</a></li>
                 <li><a href="/en/consulting.html">IT Consulting</a></li>
