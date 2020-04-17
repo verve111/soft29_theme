@@ -24,7 +24,7 @@ function isRu() {
 	}
 }
 
-$('#blog_navnar.navbar.navbar-default.navbar-fixed-top a[href!="#"]').each(
+$('#blog_navbar.navbar.navbar-default a[href!="#"]').each(
 	function() {
 		var href = this.href;
 		var sourceLang;
@@ -36,7 +36,7 @@ $('#blog_navnar.navbar.navbar-default.navbar-fixed-top a[href!="#"]').each(
 		this.href = href.replace('blog/', sourceLang);
 	});
 
-$('#blog_navnar.navbar.navbar-default.navbar-fixed-top a').each(
+$('#blog_navbar.navbar.navbar-default a').each(
 	function() {
 		if (!isRu()) {
 			return;
@@ -45,8 +45,8 @@ $('#blog_navnar.navbar.navbar-default.navbar-fixed-top a').each(
 		if (h.indexOf('Home') == 0) {
 			$(this).html(h.replace('Home', 'Главная'));
 		}
-		if (h.indexOf('Company') == 0) {
-			$(this).html(h.replace('Company', 'Компания'));
+		if (h.indexOf('Our Company') == 0) {
+			$(this).html(h.replace('Our Company', 'Компания'));
 		}		
 		if (h.indexOf('About us') == 0) {
 			$(this).html(h.replace('About us', 'O компании'));

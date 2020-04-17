@@ -1,6 +1,6 @@
     <!-- NAVIGATION
     ================================================== -->
-    <div class="navbar navbar-default " role="navigation">
+    <div id="blog_navbar" class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -9,13 +9,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/en/index.html"><img src='$url.resource("assets/img/m/soft29v2.svg")' alt="Система документооборота"></a>
+          <a class="navbar-brand" href="/index.html"><img src='$url.resource("assets/img/m/soft29v2.svg")' alt="Система документооборота"></a>
         </div>
         <div class="collapse navbar-collapse">
           <!--button class="navbar-btn btn btn-red pull-right hidden-sm hidden-xs">Sign In</button -->
           <ul class="nav navbar-nav">
             <li>
-              <a href="/en/index.html">Home</b></a>
+              <a href="/index.html">Home</b></a>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Company <b class="caret"></b></a>
@@ -24,17 +24,18 @@
                 <li><a href="/en/contact-us.html">Contacts</a></li>
               </ul>
             </li>             
-            <li class="dropdown">
+            <!--li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="/en/vnedreniye-alfresco.html">ECM Alfresco</a></li>
-                <li><a href="/en/liferay.html">Enterprise Portal Liferay</a></li>
-                <li><a href="/en/odoo.html">Odoo ERP</a></li>
+
               </ul>
-            </li>
+            </li-->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
               <ul class="dropdown-menu">
+                <li><a href="/en/vnedreniye-alfresco.html">ECM Alfresco</a></li>
+                <li><a href="/en/liferay.html">Enterprise Portal Liferay</a></li>
+                <li><a href="/en/odoo.html">Odoo ERP</a></li>			  
                 <li><a href="/en/corporate-solutions.html">Enterprise software development</a></li>
                 <li><a href="/en/consulting.html">IT Consulting</a></li>
                 <li><a href="/en/mobile-dev.html">Android, iOS Development</a></li>
