@@ -11463,7 +11463,10 @@ html {
 	margin-bottom: 10px;
 	text-align: left;
 }
-
+.navbar-text.telephone {
+	padding-left: 15px;
+}
+	
 .main-page-img {
 	max-width: 200px;
 }
@@ -11495,3 +11498,7 @@ p.wide {
 	margin-bottom: 80px;
 }
 
+.navbar-default .navbar-toggle {
+	background-color: white;
+    background-image: none;
+}
