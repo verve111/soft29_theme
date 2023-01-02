@@ -4282,7 +4282,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
 }
 .navbar-brand > img {
-  height: 42px;
+  height: 29px;
   width: auto;
 }
 @media (min-width: 768px) {
